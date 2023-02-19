@@ -50,10 +50,10 @@ header::before {
   background-color: #1c57c9;
   border-bottom-right-radius: 250px;
   height: 100%;
-  width: 100%;
+  width: 75%;
   z-index: -1;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 header .top {
   display: flex;
