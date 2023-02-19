@@ -135,6 +135,9 @@ header .container article .text-two {
   line-height: 32px;
   margin-bottom: 50px;
 }
+header .container article .text-two span {
+  display: block;
+}
 header .container article .button button {
   border-radius: 5px;
   padding: 15px 32px;
@@ -172,6 +175,7 @@ header .container article .right img:last-child {
   header nav ul {
     display: none;
   }
+
   header .left {
     display: none;
   }
@@ -193,9 +197,18 @@ header .container article .right img:last-child {
     text-align: center;
     margin: 60px auto;
   }
-  header .container article .text-one,
-  header .container article .text-one br {
-    display: inline;
+  header .container article .text-one {
+    width: 315px;
+    font-size: 42px;
+    text-align: center;
+    line-height: 55px;
+  }
+  header .container article .text-two {
+    font-size: 18px;
+    width: 315px;
+  }
+  header .container article p span {
+    display: inline !important;
   }
 }
 section {
@@ -283,6 +296,7 @@ h2 {
     width: 315px;
     margin: auto;
     text-align: center;
+    font-size: 18px;
   }
   .features .container .every .dot {
     display: none;
@@ -291,6 +305,18 @@ h2 {
     flex-direction: column;
     text-align: center;
     margin-top: 60px;
+  }
+  .features article img {
+    width: 350px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  .features article .text .box .box-bottom .box-one p:last-child {
+    font-size: 13px;
   }
 }
 .update .container .left .text {
@@ -344,8 +370,14 @@ h2 {
     flex-direction: column;
     text-align: center;
   }
+  .update .container .left .text {
+    margin: 0 auto;
+  }
   .update .container .left img {
     max-width: 100%;
+  }
+  .update .right {
+    padding: 30px;
   }
   .update .right::before {
     height: 106%;
@@ -353,6 +385,14 @@ h2 {
   }
   .update .right .box {
     flex-direction: column;
+    align-items: center;
+  }
+  .update .right .box p:first-child {
+    margin: 23px;
+    font-size: 16px;
+  }
+  .update .right .box p:last-child {
+    font-size: 13px;
   }
 }
 .services .container {
@@ -403,11 +443,15 @@ h2 {
 @media (max-width: 576px) {
   .services {
     text-align: center;
+    overflow: hidden;
+  }
+  .services .container .img img {
+    max-width: 337px;
   }
   .services .container .service {
     display: flex;
   }
-  .services .container .service .serv:not(:first-child, :nth-child(2)) {
+  .services .container .service .serv:not(:first-child) {
     display: none;
     width: 50%;
   }
@@ -486,7 +530,6 @@ h2 {
   color: rgba(38, 43, 54, 1);
   font-size: 18px;
   font-weight: 600;
-  margin-top: 42px;
 }
 .testimonials .container .testimonial .test .name .content p:last-child {
   color: rgba(96, 107, 134, 1);
@@ -520,19 +563,42 @@ h2 {
 }
 
 @media (max-width: 576px) {
+  .testimonials .container .testimonial {
+    justify-content: center;
+  }
   .testimonials .container .testimonial .test {
-    width: 100%;
+    width: 315px;
     text-align: center;
   }
   .testimonials .container .testimonial .test img {
     left: 50%;
     transform: translateX(-50%);
   }
-  .testimonials .container .testimonial .test p {
-    margin: 34px auto;
+  .testimonials .container .testimonial .test > p {
+    max-width: 100%;
+    font-size: 18px;
+    margin-top: 34px;
   }
   .testimonials .container .testimonial .test:nth-child(3) {
     display: none;
+  }
+  .testimonials .container .testimonial .test .name {
+    margin: 36px;
+  }
+  .testimonials .container .testimonial .test .name .content p:last-child {
+    position: relative;
+    z-index: 1;
+  }
+  .testimonials .container .testimonial > i:first-child {
+    left: 25px;
+  }
+  .testimonials .container .testimonial > i:last-child {
+    right: 25px;
+  }
+  .testimonials .container .testimonial .test .name i {
+    position: absolute;
+    right: 10px;
+    bottom: 55px;
   }
 }
 .contact .container {
@@ -592,6 +658,17 @@ h2 {
 @media (max-width: 576px) {
   .contact {
     text-align: center;
+    padding: 30px;
+  }
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .container .left .text {
+    width: 315px;
+  }
+  .contact .container .left img {
+    width: 310px;
+    margin-bottom: 65px;
   }
   .contact .container .left .text {
     margin: 0 auto 100px;
@@ -683,6 +760,21 @@ footer p {
   color: rgba(38, 43, 54, 1);
   font-size: 18px;
   font-weight: 400;
-  margin: 140px 0 31px;
+  margin: 140px auto 31px;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  footer p {
+    width: 226px;
+    opacity: 1;
+    color: rgba(38, 43, 54, 1);
+    font-family: "Inter-Regular";
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    line-height: 28px;
+  }
 }
