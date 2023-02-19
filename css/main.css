@@ -194,6 +194,9 @@ header .dots .dot span {
   body {
     width: 100%;
   }
+  header::before {
+    width: 100%;
+  }
   header nav ul {
     display: none;
   }
@@ -563,6 +566,22 @@ h2 {
   border-radius: 10px;
   box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.08),
     -4px -4px 24px rgba(0, 0, 0, 0.08);
+  gap: 20px;
+  padding: 20px;
+}
+.services .container .service .serv i {
+  width: 55px;
+  height: 55px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: RGB(38, 130, 214);
+  background-color: RGB(244, 247, 253);
+  border-radius: 50%;
+}
+.services .container .service .serv p {
+  flex: 1;
 }
 .services .container ul {
   display: flex;
@@ -594,7 +613,10 @@ h2 {
   .services .container .service {
     display: flex;
   }
-  .services .container .service .serv:not(:first-child) {
+  .services .container .service .serv {
+    padding: 10px;
+  }
+  .services .container .service .serv:not(:nth-child(2)) {
     display: none;
     width: 50%;
   }
