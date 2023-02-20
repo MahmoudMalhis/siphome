@@ -614,6 +614,12 @@ h2 {
     font-size: 13px;
   }
 }
+@media (max-width: 375px) {
+  .update .right {
+    height: 1700px;
+    gap: 0px;
+  }
+}
 .services .container {
   display: flex;
   flex-direction: column;
@@ -683,6 +689,8 @@ h2 {
   }
   .services .container .service {
     width: 640px;
+    display: flex;
+    overflow-y: hidden;
   }
 }
 @media (max-width: 576px) {
@@ -690,18 +698,17 @@ h2 {
     text-align: center;
     overflow: hidden;
   }
+  .services h2 {
+    width: 100%;
+  }
   .services .container .img img {
     max-width: 337px;
   }
   .services .container .service {
-    display: flex;
+    width: 315px;
   }
   .services .container .service .serv {
     padding: 10px;
-  }
-  .services .container .service .serv:not(:nth-child(2)) {
-    display: none;
-    width: 50%;
   }
 }
 .testimonials {
@@ -937,6 +944,9 @@ h2 {
   .contact .container .left .text {
     margin: 0 auto 100px;
   }
+  form {
+    width: 315px;
+  }
 }
 .info .container {
   display: flex;
@@ -1007,7 +1017,6 @@ h2 {
 }
 @media (max-width: 992px) {
   .info .container {
-    flex-wrap: wrap;
   }
 }
 @media (max-width: 576px) {
