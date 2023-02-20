@@ -8,8 +8,6 @@ body {
   font-family: "Jomhuria", cursive;
   font-family: "Open Sans", sans-serif;
   font-family: "Work Sans", sans-serif;
-  margin: 0 auto;
-  max-width: 1440px;
 }
 a {
   text-decoration: none;
@@ -35,6 +33,26 @@ a {
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1570px;
+  }
+}
+@media (min-width: 2000px) {
+  .container {
+    width: 1970px;
+  }
+}
+@media (min-width: 2500px) {
+  .container {
+    width: 2470px;
   }
 }
 
@@ -183,8 +201,8 @@ header .dots {
   bottom: 0;
 }
 .dots .dot span {
-  height: 5px;
-  width: 5px;
+  height: 3px;
+  width: 3px;
   border-radius: 50%;
   display: inline-block;
   margin-right: 3px;
@@ -301,12 +319,7 @@ section {
   right: -155px;
 }
 .features .dots .dot span {
-  height: 5px;
-  width: 5px;
   background-color: rgb(223 224 227 / 70%);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 3px;
 }
 
 .features .container .every .dot {
@@ -524,12 +537,7 @@ h2 {
   right: 0px;
 }
 .update .right .dots .dot span {
-  height: 5px;
-  width: 5px;
   background-color: rgb(71 121 212);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 3px;
 }
 .update .left {
   position: relative;
@@ -540,12 +548,7 @@ h2 {
   left: 0px;
 }
 .update .left > .dots .dot span {
-  height: 5px;
-  width: 5px;
   background-color: rgb(223 224 227 / 70%);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 3px;
 }
 .update .left .text .dots:last-child {
   position: absolute;
@@ -554,12 +557,7 @@ h2 {
   z-index: -1;
 }
 .update .left .text .dots .dot span {
-  height: 5px;
-  width: 5px;
   background-color: rgb(223 224 227 / 70%);
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 3px;
 }
 @media (max-width: 1200px) {
   .update .right {
@@ -1012,6 +1010,11 @@ h2 {
 }
 @media (max-width: 992px) {
   .info .container {
+    flex-wrap: wrap;
+  }
+  .info .container .addres {
+    width: 100%;
+    margin-bottom: 77px;
   }
 }
 @media (max-width: 576px) {
@@ -1021,7 +1024,7 @@ h2 {
     text-align: center;
   }
   .info .container > div {
-    margin-top: 50px;
+    margin-top: 69px;
   }
 }
 footer p {
