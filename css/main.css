@@ -40,7 +40,7 @@ a {
 
 header {
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding: 36px;
 }
@@ -182,15 +182,28 @@ header .dots {
   left: 0;
   bottom: 0;
 }
-header .dots .dot span {
+.dots .dot span {
   height: 5px;
   width: 5px;
-  background-color: rgb(71 121 212);
   border-radius: 50%;
   display: inline-block;
   margin-right: 3px;
 }
-@media (max-width: 576px) {
+.dot-box {
+  position: absolute;
+  bottom: -210px;
+  right: -4px;
+}
+header .dot-box .dots {
+  position: relative;
+}
+.dot-box .dots .dot span {
+  background-color: rgb(223 224 227 / 70%);
+}
+header .dots .dot span {
+  background-color: rgb(71 121 212);
+}
+@media (max-width: 1200px) {
   body {
     width: 100%;
   }
@@ -213,6 +226,16 @@ header .dots .dot span {
     border: 1px solid white;
     padding: 10px 20px;
   }
+  header .container article .right img:last-child {
+    position: absolute;
+    bottom: -35%;
+    right: -24px;
+  }
+  .dot-box {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
   header .container article .right {
     display: none;
   }
@@ -223,6 +246,19 @@ header .dots .dot span {
     margin: 60px auto;
   }
   header .container article .text-one {
+    width: 640px;
+    text-align: center;
+  }
+  header .container article .text-two {
+    font-size: 18px;
+    width: 640px;
+  }
+  header .container article p span {
+    display: inline !important;
+  }
+}
+@media (max-width: 576px) {
+  header .container article .text-one {
     width: 315px;
     font-size: 42px;
     text-align: center;
@@ -232,8 +268,13 @@ header .dots .dot span {
     font-size: 18px;
     width: 315px;
   }
-  header .container article p span {
-    display: inline !important;
+}
+@media (max-width: 375px) {
+  header {
+    height: 120vh;
+  }
+  .dots .dot:first-child {
+    visibility: hidden;
   }
 }
 section {
@@ -249,9 +290,6 @@ section {
   margin-bottom: 130px;
 }
 
-.features .dot-box {
-  position: relative;
-}
 .features .dots:first-child {
   position: absolute;
   bottom: 230px;
@@ -370,6 +408,21 @@ h2 {
   font-weight: 400;
   line-height: 24px;
 }
+@media (max-width: 992px) {
+  section {
+    margin-top: 150px;
+  }
+  .features .container .every p {
+    width: 640px;
+    margin: auto;
+  }
+  .features article {
+    flex-direction: column;
+    text-align: center;
+    margin: 60px auto;
+    width: 640px;
+  }
+}
 @media (max-width: 576px) {
   section {
     margin-top: 100px;
@@ -383,10 +436,9 @@ h2 {
   .features .container .every .dot {
     display: none;
   }
+
   .features article {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 60px;
+    width: 315px;
   }
   .features article img {
     width: 350px;
@@ -418,6 +470,9 @@ h2 {
 .update .right {
   position: relative;
   padding: 130px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  gap: 48px;
 }
 .update .right::before {
   content: "";
@@ -506,14 +561,39 @@ h2 {
   display: inline-block;
   margin-right: 3px;
 }
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
+  .update .right {
+    padding: 30px;
+  }
+  .update .container .left .text {
+    margin: auto;
+  }
+}
+@media (max-width: 992px) {
   .update {
     flex-direction: column;
     text-align: center;
   }
   .update .right {
+    padding: 78px;
+  }
+  .update .right::before {
+    width: 100%;
+    height: 130%;
+  }
+  .update .right .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .update .left .dots {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .update .right {
     padding: 30px;
-    height: 145vh;
+    height: 1400px;
   }
   .update .container .left .text {
     margin: 0 auto;
@@ -526,19 +606,12 @@ h2 {
     height: 110%;
     width: 100%;
   }
-  .update .right .box {
-    flex-direction: column;
-    align-items: center;
-  }
   .update .right .box p:first-child {
     margin: 23px;
     font-size: 16px;
   }
   .update .right .box p:last-child {
     font-size: 13px;
-  }
-  .update .left .dots {
-    display: none;
   }
 }
 .services .container {
@@ -553,7 +626,7 @@ h2 {
 
 .services .container .service {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   max-width: 100%;
   margin-top: 128px;
   gap: 20px;
@@ -588,7 +661,6 @@ h2 {
   justify-content: space-between;
   width: 108px;
   margin: 64px auto 0;
-  padding-bottom: 230px;
   list-style: none;
 }
 
@@ -602,6 +674,17 @@ h2 {
   background-color: RGB(28, 87, 201);
 }
 
+@media (max-width: 992px) {
+  .services {
+    text-align: center;
+  }
+  .services h2 {
+    width: 640px;
+  }
+  .services .container .service {
+    width: 640px;
+  }
+}
 @media (max-width: 576px) {
   .services {
     text-align: center;
@@ -713,7 +796,7 @@ h2 {
   justify-content: space-between;
   width: 108px;
   margin: 64px auto 0;
-  padding-bottom: 230px;
+  padding-bottom: 80px;
   list-style: none;
 }
 
@@ -727,7 +810,7 @@ h2 {
   background-color: RGB(28, 87, 201);
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .testimonials .container .testimonial {
     justify-content: center;
   }
@@ -768,7 +851,7 @@ h2 {
 }
 .contact .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .contact .container .left .text {
   width: 420px;
@@ -821,7 +904,7 @@ h2 {
   width: fit-content;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .contact {
     text-align: center;
     padding: 30px;
@@ -829,6 +912,21 @@ h2 {
   .contact .container {
     flex-direction: column;
   }
+  .contact .container .left .text {
+    width: 640px;
+    margin: 64px auto;
+  }
+  form {
+    width: 360px;
+    margin: 64px auto;
+  }
+  .contact .container .right form input,
+  .contact .container .right form textarea,
+  .contact .container .right form a {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
   .contact .container .left .text {
     width: 315px;
   }
@@ -838,11 +936,6 @@ h2 {
   }
   .contact .container .left .text {
     margin: 0 auto 100px;
-  }
-  .contact .container .right form input,
-  .contact .container .right form textarea,
-  .contact .container .right form a {
-    width: 100%;
   }
 }
 .info .container {
@@ -911,6 +1004,11 @@ h2 {
     rgb(254, 218, 117)
   );
   color: white;
+}
+@media (max-width: 992px) {
+  .info .container {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 576px) {
   .info .container {
