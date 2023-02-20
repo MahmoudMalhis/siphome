@@ -371,7 +371,8 @@ h2 {
 
 .features article .text .box .box-bottom {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 50px;
   margin-top: 48px;
 }
 
@@ -434,6 +435,9 @@ h2 {
     text-align: center;
     margin: 60px auto;
     width: 640px;
+  }
+  .features article .text .box .box-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
   }
 }
 @media (max-width: 576px) {
