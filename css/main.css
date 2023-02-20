@@ -890,8 +890,8 @@ h2 {
   height: 48px;
   border-radius: 3px;
   border: 1px solid rgba(204, 204, 204, 1);
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 1);
+  padding: 10px;
+  outline-color: #3acf6e;
 }
 
 .contact .container .right form textarea {
