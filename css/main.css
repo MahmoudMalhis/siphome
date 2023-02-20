@@ -593,7 +593,8 @@ h2 {
 @media (max-width: 576px) {
   .update .right {
     padding: 30px;
-    height: 1400px;
+    height: 1700px;
+    gap: 0px;
   }
   .update .container .left .text {
     margin: 0 auto;
@@ -612,12 +613,6 @@ h2 {
   }
   .update .right .box p:last-child {
     font-size: 13px;
-  }
-}
-@media (max-width: 375px) {
-  .update .right {
-    height: 1700px;
-    gap: 0px;
   }
 }
 .services .container {
