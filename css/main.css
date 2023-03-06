@@ -116,6 +116,7 @@ header nav ul li:last-child {
 }
 
 header nav ul li a {
+  opacity: 0.4;
   color: white;
   font-weight: 400;
   font-size: 15px;
@@ -134,7 +135,9 @@ header nav ul li:last-child::after {
   z-index: -1;
 }
 
-header nav ul li a.active {
+header nav ul li a.active,
+header nav ul li a:hover {
+  opacity: 1;
   font-weight: bold;
 }
 
@@ -295,6 +298,19 @@ header .dots .dot span {
     position: relative;
   }
 
+  header nav .menu::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -264px;
+    left: calc(-67px / 2);
+    border-radius: 50%;
+    border-left: 1px solid rgb(223 224 227 / 15%);
+    border-bottom: 1px solid rgb(223 224 227 / 15%);
+    z-index: -1;
+  }
+
   header .container article .right {
     display: none;
   }
@@ -417,7 +433,7 @@ section {
   flex-direction: column;
 }
 
-h6 {
+h2 {
   color: rgba(32, 83, 209, 1);
   font-size: 15px;
   font-weight: 700;
@@ -425,7 +441,7 @@ h6 {
   text-transform: uppercase;
 }
 
-h2 {
+h6 {
   color: rgba(38, 43, 54, 1);
   font-size: 42px;
   font-weight: 700;
@@ -558,11 +574,11 @@ h2 {
     width: 350px;
   }
 
-  h2 {
+  h6 {
     font-size: 32px;
   }
 
-  h6 {
+  h2 {
     font-size: 15px;
   }
 
@@ -819,7 +835,7 @@ h2 {
     text-align: center;
   }
 
-  .services h2 {
+  .services h6 {
     max-width: 640px;
   }
 
@@ -836,7 +852,7 @@ h2 {
     overflow: hidden;
   }
 
-  .services h2 {
+  .services h6 {
     width: 100%;
   }
 
@@ -1032,8 +1048,10 @@ h2 {
   width: 420px;
 }
 
-.contact .container .left .text h2 {
+.contact .container .left .text h6 {
   margin-top: 16px;
+  margin-bottom: 64px;
+  line-height: 1.5;
 }
 
 .contact .container .right form {
