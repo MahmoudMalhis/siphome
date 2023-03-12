@@ -1146,7 +1146,8 @@ h6 {
 
 footer .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-top: 280px;
 }
 
 footer .container>div img,
@@ -1241,7 +1242,7 @@ footer .container .connected .social p {
   }
 }
 
-footer p {
+footer>p {
   color: rgba(38, 43, 54, 1);
   font-size: 18px;
   font-weight: 400;
@@ -1250,7 +1251,7 @@ footer p {
 }
 
 @media (max-width: 576px) {
-  footer p {
+  footer>p {
     width: 226px;
     opacity: 1;
     color: rgba(38, 43, 54, 1);
